@@ -36,7 +36,7 @@ function echo_letter {
     _row=$2
     LC_CTYPE=C _ascii=$( printf '%d' "'$_letter")
     
-    if [[ ( "$_letter" == '?' ) || ( $_ascii -lt 97 || $_ascii -gt 122 ) ]]  
+    if [[ ( $_ascii -lt 97 || $_ascii -gt 122 ) ]]  
     then
         _ascii=123 #return a questionmark
     elif [ "$_letter" == ' ' ]
